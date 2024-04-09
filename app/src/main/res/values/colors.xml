@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_transparency80">#CCFFFFFF</color>
+    <color name="vassBlue">#29BDEF</color>
+    <color name="vassRed">#DF0000</color>
+    <color name="vassGreyMedium">#4D999999</color>
+    <color name="vassGreyLight">#4DBABDC5</color>
+    <color name="vassGreyDark">#4D000000</color>
+    <color name="invisible">#00000000</color>
+    <color name="statusOffline">#FFED4245</color>
+    <color name="statusOnline">#FF3BA55C</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="green_lime">#FF75fb4c</color>
+    <color name="text">#FF000000</color>
+    <color name="textbox_background">#FFFFFFFF</color>
+    <color name="hint">#FFa9a8aa</color>
+    <color name="darker_text">#FF393939</color>
+    <color name="vassAccent">#4D000000</color>
+    <color name="background">#FFFEF7FF</color>
+    <color name="blacknWhite">#FFFFFFFF</color>
+</resources>

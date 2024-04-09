@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LogInFragment">
+
+    <fragment
+        android:id="@+id/LogInFragment"
+        android:name="com.example.talkey_android.ui.login.LogInFragment"
+        android:label="LogIn"
+        tools:layout="@layout/fragment_log_in">
+        <action
+            android:id="@+id/action_LogInFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/LogInFragment" />
+        <action
+            android:id="@+id/action_LogInFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.talkey_android.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_chat"
+            app:destination="@id/ChatFragment"
+            app:popUpTo="@id/HomeFragment" />
+
+        <action
+            android:id="@+id/action_home_to_login"
+            app:destination="@id/LogInFragment" />
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_HomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/HomeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ChatFragment"
+        android:name="com.example.talkey_android.ui.chat.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_chat_to_home"
+            app:destination="@id/HomeFragment" />
+        <argument
+            android:name="idUser"
+            app:argType="string" />
+        <argument
+            android:name="idChat"
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.talkey_android.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_LogInFragment"
+            app:destination="@id/LogInFragment" />
+        <argument
+            android:name="isNew"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_profileFragment_to_passwordChangeFragment"
+            app:destination="@id/passwordChangeFragment"
+            app:popUpTo="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordChangeFragment"
+        android:name="com.example.talkey_android.ui.password_change.PasswordChangeFragment"
+        android:label="fragment_password_change"
+        tools:layout="@layout/fragment_password_change">
+        <argument
+            android:name="image"
+            app:argType="string" />
+        <argument
+            android:name="nick"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

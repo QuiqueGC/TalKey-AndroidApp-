@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment"
+    android:id="@+id/constraintLayout">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/vassBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/profile_title"
+        app:titleTextColor="@android:color/white" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/editButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/editar_white"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/cancelButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/x"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgProfileBackground"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:shapeAppearanceOverlay="@style/circleImageViewShape" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:shapeAppearanceOverlay="@style/circleImageViewShape" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivStatusBackground"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@color/background"
+        app:layout_constraintTop_toTopOf="@id/ivStatus"
+        app:layout_constraintBottom_toBottomOf="@id/ivStatus"
+        app:layout_constraintStart_toStartOf="@id/ivStatus"
+        app:layout_constraintEnd_toEndOf="@id/ivStatus"
+        app:shapeAppearanceOverlay="@style/circleImageViewShape" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivStatus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/statusOnline"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+        app:layout_constraintEnd_toEndOf="@id/imgProfile"
+        app:shapeAppearanceOverlay="@style/circleImageViewShape" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivImageEditBackground"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@color/background"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/ivImageEdit"
+        app:layout_constraintBottom_toBottomOf="@id/ivImageEdit"
+        app:layout_constraintStart_toStartOf="@id/ivImageEdit"
+        app:layout_constraintEnd_toEndOf="@id/ivImageEdit"
+        app:shapeAppearanceOverlay="@style/circleImageViewShape" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivImageEdit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/camera"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+        app:layout_constraintEnd_toEndOf="@id/imgProfile"
+        app:shapeAppearanceOverlay="@style/circleImageViewShape" />
+
+    <TextView
+        android:id="@+id/tvNicknameLabel"
+        style="@style/text"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/hint_nick"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etNickname"
+        style="@style/textBox"
+        android:layout_marginTop="@dimen/minimal_margin"
+        android:hint="@string/hint_nick"
+        android:inputType="text"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNicknameLabel" />
+
+    <TextView
+        android:id="@+id/tvNickname"
+        style="@style/text"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNicknameLabel"
+        tools:text="Juan Cuesta" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="etNickname,tvNickname" />
+
+
+    <TextView
+        android:id="@+id/tvLoginLabel"
+        style="@style/text"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/hint_email"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrierNickname" />
+
+    <TextView
+        android:id="@+id/tvLogin"
+        style="@style/text"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLoginLabel"
+        tools:text="juan.cuesta@vasscompany.com" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvLogin" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAccept"
+        style="@style/button"
+        android:layout_marginBottom="48dp"
+        android:text="@string/change_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/loadingBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:indeterminateTint="@color/vassBlue"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
